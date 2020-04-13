@@ -38,11 +38,12 @@ const addNote = function (title, body) {
 // 8. přepracovat simulaci na řádnou funkci podle komentáře
 const removeNote = function (title) {
     const notes = loadNotes();
-
-    const indexNaSmazani = (notes , title) => {
-
-    }
-    console.log(indexNaSmazani(notes, title));
+    const deletedIndex = notes.findIndex(
+        (array) => {
+            return array.title == title;
+        }
+    );
+    console.log(deletedIndex);
     //notes.slice()
     console.log('Mažu poznámku')
     // načtení všech poznámek
