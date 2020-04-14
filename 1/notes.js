@@ -43,12 +43,8 @@ const removeNote = function (title) {
             return array.title == title;
         }
     );
-    console.log(deletedIndex);
-    //notes.slice()
-    console.log('Mažu poznámku')
-    // načtení všech poznámek
-    // vyhledání všech poznámek, které mají být zachovány
-    // uložení poznámek
+    const editedNotes = notes.filter((note) => note.title !== title);
+    saveNotes(editedNotes);
 }
 
 // 9. dopracovat simulaci funkce pro čtení a výpis do konzole jedné poznámky 
